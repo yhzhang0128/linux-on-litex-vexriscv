@@ -114,15 +114,15 @@ def SoCLinux(soc_cls, **kwargs):
             local_ip  = local_ip.split(".")
             remote_ip = remote_ip.split(".")
 
-            self.add_constant("LOCALIP1", int(local_ip[0]))
-            self.add_constant("LOCALIP2", int(local_ip[1]))
-            self.add_constant("LOCALIP3", int(local_ip[2]))
-            self.add_constant("LOCALIP4", int(local_ip[3]))
+            #self.add_constant("LOCALIP1", int(local_ip[0]))
+            #self.add_constant("LOCALIP2", int(local_ip[1]))
+            #self.add_constant("LOCALIP3", int(local_ip[2]))
+            #self.add_constant("LOCALIP4", int(local_ip[3]))
 
-            self.add_constant("REMOTEIP1", int(remote_ip[0]))
-            self.add_constant("REMOTEIP2", int(remote_ip[1]))
-            self.add_constant("REMOTEIP3", int(remote_ip[2]))
-            self.add_constant("REMOTEIP4", int(remote_ip[3]))
+            #self.add_constant("REMOTEIP1", int(remote_ip[0]))
+            #self.add_constant("REMOTEIP2", int(remote_ip[1]))
+            #self.add_constant("REMOTEIP3", int(remote_ip[2]))
+            #self.add_constant("REMOTEIP4", int(remote_ip[3]))
 
         # DTS generation ---------------------------------------------------------------------------
         def generate_dts(self, board_name):
