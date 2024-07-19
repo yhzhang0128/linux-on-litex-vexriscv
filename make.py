@@ -80,7 +80,8 @@ class Arty(Board):
             "ethernet",
             # Storage
             "spiflash",
-            "sdcard",
+            #"sdcard",
+            "spisdcard",
             # GPIOs
             "leds",
             "rgb_led",
