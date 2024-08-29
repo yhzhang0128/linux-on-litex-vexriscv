@@ -70,8 +70,8 @@ class AcornPCIe(Board):
         prog.flash(0, filename.replace(".bin", "_fallback.bin"))
 
 # Arty support -------------------------------------------------------------------------------------
-
 class Arty(Board):
+    soc_kwargs = {"l2_size" : 2048} # Use Wishbone and L2 for memory accesses.
     def __init__(self):
         from litex_boards.targets import digilent_arty
         Board.__init__(self, digilent_arty.BaseSoC, soc_capabilities={
