@@ -99,6 +99,7 @@ class Arty(Board):
 class ArtyA7(Arty): pass
 
 class ArtyS7(Board):
+    soc_kwargs = {"l2_size" : 2048} # Use Wishbone and L2 for memory accesses.
     def __init__(self):
         from litex_boards.targets import digilent_arty_s7
         Board.__init__(self, digilent_arty_s7.BaseSoC, soc_capabilities={
@@ -106,6 +107,7 @@ class ArtyS7(Board):
             "serial",
             # Storage
             "spiflash",
+            "spisdcard",
             # GPIOs
             "leds",
             "rgb_led",
@@ -918,6 +920,9 @@ def main():
         # SoC peripherals --------------------------------------------------------------------------
         if board_name in ["arty", "arty_a7"]:
             from litex_boards.platforms.digilent_arty import _sdcard_pmod_io
+            board.platform.add_extension(_sdcard_pmod_io)
+        if board_name in ["arty_s7"]:
+            from litex_boards.platforms.digilent_arty_s7 import _sdcard_pmod_io
             board.platform.add_extension(_sdcard_pmod_io)
 
         if board_name in ["aesku40"]:
