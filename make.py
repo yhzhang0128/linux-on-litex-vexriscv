@@ -743,7 +743,7 @@ class Sipeed_tang_nano_20k(Board):
         Board.__init__(self, sipeed_tang_nano_20k.BaseSoC, soc_capabilities={
             # Communication
             "serial",
-            "sdcard",
+            "spisdcard",
         })
 
 # Sipeed Tang Primer 20K support -------------------------------------------------------------------
