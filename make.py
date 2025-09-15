@@ -71,7 +71,7 @@ class AcornPCIe(Board):
 
 # Arty support -------------------------------------------------------------------------------------
 class Arty(Board):
-    soc_kwargs = {"l2_size" : 4096} # Use Wishbone and L2 for memory accesses.
+    soc_kwargs = {"l2_size" : 2048} # Use Wishbone and L2 for memory accesses.
     def __init__(self):
         from litex_boards.targets import digilent_arty
         Board.__init__(self, digilent_arty.BaseSoC, soc_capabilities={
@@ -84,16 +84,16 @@ class Arty(Board):
             "spisdcard",
             # GPIOs
             "leds",
-            "rgb_led",
-            "switches",
+            #"rgb_led",
+            #"switches",
             # Buses
             "spi",
-            "i2c",
+            #"i2c",
             # Monitoring
-            "xadc",
+            #"xadc",
             # 7-Series specific
-            "mmcm",
-            "icap_bitstream",
+            #"mmcm",
+            #"icap_bitstream",
         })
 
 class ArtyA7(Arty): pass
