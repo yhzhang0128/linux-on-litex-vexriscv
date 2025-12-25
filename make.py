@@ -111,7 +111,7 @@ class ArtyS7(Board):
             # GPIOs
             "leds",
             "rgb_led",
-            "switches",
+            #"switches",
             # Buses
             "spi",
             "i2c",
