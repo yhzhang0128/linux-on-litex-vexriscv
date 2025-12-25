@@ -87,7 +87,7 @@ class Arty(Board):
             #"rgb_led",
             #"switches",
             # Buses
-            "spi",
+            #"spi",
             #"i2c",
             # Monitoring
             #"xadc",
